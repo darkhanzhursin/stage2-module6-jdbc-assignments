@@ -96,6 +96,9 @@ public class SimpleJDBCRepository {
              var statement = conn.prepareStatement(findUserByNameSQL)) {
             statement.setString(1, userName);
             ResultSet resultSet = statement.executeQuery();
+            if (resultSet.next()) {
+                user = map(resultSet);
+            }
 
         } catch (SQLException e) {
             throw new RuntimeException(e);
