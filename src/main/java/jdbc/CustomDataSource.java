@@ -1,8 +1,5 @@
 package jdbc;
 
-import javax.management.monitor.Monitor;
-import javax.sql.DataSource;
-
 import lombok.Getter;
 import lombok.Setter;
 
@@ -13,6 +10,8 @@ import java.sql.SQLException;
 import java.sql.SQLFeatureNotSupportedException;
 import java.util.Properties;
 import java.util.logging.Logger;
+
+import javax.sql.DataSource;
 
 @Getter
 @Setter

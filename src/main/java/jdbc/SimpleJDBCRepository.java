@@ -1,6 +1,5 @@
 package jdbc;
 
-
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
@@ -137,7 +136,7 @@ public class SimpleJDBCRepository {
         return null;
     }
 
-    private void deleteUser(Long userId) {
+    public void deleteUser(Long userId) {
 
         try (var conn = customDataSource.getConnection();
             var statement = conn.prepareStatement(deleteUser)) {
